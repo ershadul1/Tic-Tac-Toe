@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 require_relative '../lib/methods.rb'
 
+
+@arr = %w[1 2 3 4 5 6 7 8 9]
+arr_two = []
+
 def display_board(arr)
   puts " #{arr[0]} | #{arr[1]} | #{arr[2]}"
   puts '---|---|---'
@@ -8,10 +12,6 @@ def display_board(arr)
   puts '---|---|---'
   puts " #{arr[6]} | #{arr[7]} | #{arr[8]}"
 end
-
-arr = %w[1 2 3 4 5 6 7 8 9]
-
-arr_two = []
 
 puts 'Welcome to Tic Tac Toe'
 puts 'Input Name of the Player 1'
@@ -41,7 +41,8 @@ while game_finish == false && i < 10
   move.apply_input(arr, i)
   puts 'This is the board now'
   display_board(arr)
-  game_finish = win_checker(arr) ? true : false
+  game_result = Result.new(arr) 
+  game_finish = game_result.win_checker ? true : false
   i += 1
 end
 
