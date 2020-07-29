@@ -39,7 +39,7 @@ while game_finish == false && i < 10
   puts "Your input was #{input}"
   arr_two << input
   move.apply_input(arr, i)
-  puts 'This is the board now'
+  puts 'This is the board now now'
   display_board(arr)
   game_result = Result.new(arr) 
   game_finish = game_result.win_checker ? true : false
