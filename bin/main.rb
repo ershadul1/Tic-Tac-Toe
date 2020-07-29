@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-require_relative '../lib/methods.rb'
+require_relative '../lib/move.rb'
+require_relative '../lib/game_result.rb'
 
 # This method prints the board
 def display_board(arr)
@@ -47,7 +48,7 @@ while game_finish == false && i < 10 # This loop continues untill game is finish
   i += 1 # Increments i, which we need to determine if the game has drawn
 end
 
-if i > 9 # Condition for checking if the game drwan or won
+if game_finish == false # Condition for checking if the game drwan or won
   puts 'This game is a draw'
 elsif game_result.win_checker(arr) == 'X'
   puts "#{player_one} has won the game"
