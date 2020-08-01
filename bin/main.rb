@@ -12,7 +12,6 @@ def display_board(arr)
 end
 
 arr = %w[1 2 3 4 5 6 7 8 9]
-arr_two = []
 
 puts 'Welcome to Tic Tac Toe'
 puts 'Input Name of the Player 1'
@@ -35,11 +34,10 @@ while game_finish == false && i < 10
     puts "Turn of #{player}:"
     input = gets.chomp
     move = Move.new(input)
-    move.validate(arr, arr_two) == true ? (valid_move = true) : (puts 'Wrong input! Try again')
+    move.validate(arr) == true ? (valid_move = true) : (puts 'Wrong input! Try again')
   end
-  
+
   puts "Your input was #{input}"
-  arr_two << input
   move.apply_input(arr, i)
   puts 'This is the board now'
   display_board(arr)
