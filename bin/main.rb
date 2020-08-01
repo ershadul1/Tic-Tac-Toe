@@ -37,7 +37,7 @@ while game_finish == false && i < 10
     move = Move.new(input)
     move.validate(arr, arr_two) == true ? (valid_move = true) : (puts 'Wrong input! Try again')
   end
-
+  
   puts "Your input was #{input}"
   arr_two << input
   move.apply_input(arr, i)
