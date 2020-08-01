@@ -23,10 +23,9 @@ puts 'The game has started'
 puts 'This is the board'
 
 display_board(arr)
-game_finish = false
-i = 1
 
-while game_finish == false && i < 10
+i = 1
+while i < 10
   player = i.even? ? player_two : player_one
   valid_move = false
 
@@ -42,14 +41,14 @@ while game_finish == false && i < 10
   puts 'This is the board now'
   display_board(arr)
   game_result = GameResult.new
-  game_finish = game_result.win_checker(arr) ? true : false
+  i = 10 if game_result.win_checker(arr) 
   i += 1
 end
 
-if game_finish == false
-  puts 'This game is a draw'
-elsif game_result.win_checker(arr) == 'X'
+if game_result.win_checker(arr) == 'X'
   puts "#{player_one} has won the game"
-else
+elsif game_result.win_checker(arr) == 'O'
   puts "#{player_two} has won the game"
+else
+  puts 'This game is a draw'
 end
