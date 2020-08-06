@@ -1,22 +1,24 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/move.rb'
-require_relative '../lib/game_result.rb'
+require './lib/move.rb'
+require './lib/game_result.rb'
 
 def display_board(arr)
+  puts ''
   puts " #{arr[0]} | #{arr[1]} | #{arr[2]}"
   puts '---|---|---'
   puts " #{arr[3]} | #{arr[4]} | #{arr[5]}"
   puts '---|---|---'
   puts " #{arr[6]} | #{arr[7]} | #{arr[8]}"
+  puts ''
 end
 
 arr = %w[1 2 3 4 5 6 7 8 9]
 
 puts 'Welcome to Tic Tac Toe'
-puts 'Input Name of the Player 1'
+print 'Input Name of the Player 1: '
 player_one = gets.chomp
-puts 'Input Name of the Player 2'
+print 'Input Name of the Player 2: '
 player_two = gets.chomp
 puts "Welcome #{player_one} [X]  and #{player_two} [O]"
 puts 'The game has started'
@@ -46,9 +48,9 @@ while i < 10
 end
 
 if game_result.win_checker(arr) == 'X'
-  puts "#{player_one} has won the game"
+  puts "#{player_one} [X] has won the game"
 elsif game_result.win_checker(arr) == 'O'
-  puts "#{player_two} has won the game"
+  puts "#{player_two} [O] has won the game"
 else
   puts 'This game is a draw'
 end
