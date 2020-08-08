@@ -16,7 +16,6 @@ describe GameResult do
 end
 
 describe Move do
-
   let(:new_move) { Move.new input }
 
   context '1' do
@@ -28,7 +27,7 @@ describe Move do
 
   context '2' do
     let(:input) { 1 }
-    it 'when a player choses same cell again' do
+    it 'when a player chooses same cell again' do
       expect(new_move.validate(['X', 'X', 'X', 4, 'O', 6, 7, 'O', 9])).to eql(false)
     end
   end

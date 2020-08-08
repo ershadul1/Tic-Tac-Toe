@@ -64,7 +64,7 @@ class Game
   end
 
   def play_again
-    print " Do you want to play again?(y/n) : "
+    print ' Do you want to play again?(y/n) : '
     game_run if gets.chomp == 'y'
   end
 

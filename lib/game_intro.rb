@@ -1,8 +1,8 @@
 module GameIntro
   WELCOME_MESSAGE = "
-                     * * * * * * * * * * * * * * 
+                     * * * * * * * * * * * * * *
                      *  WELCOME TO TIC TAC TOE *
-                     * * * * * * * * * * * * * *"
+                     * * * * * * * * * * * * * *".Freeze
   GAME_INSTRUCTIONS = "
       How to play this game?
 
@@ -11,6 +11,5 @@ module GameIntro
       3. In order to win the game, a player must place three of their marks
          in a horizontal, vertical, or diagonal row.
       4. If no player wins before filling all cells, then the game is a draw
-      "
-
+      ".Freeze
 end
