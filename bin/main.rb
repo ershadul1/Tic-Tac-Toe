@@ -7,15 +7,18 @@ require_relative '../lib/game_intro.rb'
 class Game
   include GameIntro
 
-  def initialize
+  def game_reset
     @arr = %w[1 2 3 4 5 6 7 8 9]
     @i = 1
+    @game_result = GameResult.new
   end
 
   def game_run
+    game_reset
     show_intro
     game_engine
     game_over
+    play_again
   end
 
   def show_intro
@@ -47,20 +50,24 @@ class Game
       move.apply_input(@arr, @i)
       puts 'This is the board now'
       display_board(@arr)
-      game_result = GameResult.new
-      @i = 10 if game_result.win_checker(@arr)
+      @i = 10 if @game_result.win_checker(@arr)
       @i += 1
     end
   end
 
   def game_over
-    if game_result.win_checker(@arr) == 'X'
+    if @game_result.win_checker(@arr) == 'X'
       puts "#{@player_one} [X] has won the game"
-    elsif game_result.win_checker(@arr) == 'O'
+    elsif @game_result.win_checker(@arr) == 'O'
       puts "#{@player_two} [O] has won the game"
     else
       puts 'This game is a draw'
     end
+  end
+
+  def play_again
+    puts "Do you want to play again?(y/n)"
+    game_run if gets.chomp == 'y'
   end
 
   def player_selector
