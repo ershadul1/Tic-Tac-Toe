@@ -42,7 +42,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@Ershadul/Tic-Tac-Toe-3#bin/main.rb)
+[Live Demo Link](https://repl.it/@Ershadul/Tic-Tac-Toe#bin/main.rb)
 
 ## Getting Started
 
