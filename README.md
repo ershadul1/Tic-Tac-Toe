@@ -12,7 +12,7 @@
  In order to win the game, a player must place three of their marks in a horizontal, vertical, or diagonal row. Players soon discover that the best play from both parties leads to a draw. Hence, tic-tac-toe is most often played by young children, who often have not yet discovered the optimal strategy.
 
 # How to play this game?
- Open the live demo [link](https://repl.it/@Ershadul/Tic-Tac-Toe-3#bin/main.rb). Then press the run button on replt.it, as shown in the image below:-
+ Open the live demo [link](https://repl.it/@Ershadul/Tic-Tac-Toe#bin/main.rb). Then press the run button on replt.it, as shown in the image below:-
  
  ![screenshot](screenshot/run.png)
  
