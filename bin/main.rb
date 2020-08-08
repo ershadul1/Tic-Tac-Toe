@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require './lib/move.rb'
-require './lib/game_result.rb'
-require './lib/game_intro.rb'
+require_relative '../lib/move.rb'
+require_relative '../lib/game_result.rb'
+require_relative '../lib/game_intro.rb'
 
 def display_board(arr)
   puts ''
@@ -14,19 +14,30 @@ def display_board(arr)
   puts ''
 end
 
-
-class Game 
+class Game
   include GameIntro
-  arr = %w[1 2 3 4 5 6 7 8 9]
-  puts WELCOME_MESSAGE
-  puts GAME_INSTRUCTIONS
-  print 'Input Name of the Player 1: '
-  player_one = gets.chomp
-  print 'Input Name of the Player 2: '
-  player_two = gets.chomp
-  puts "Welcome #{player_one} [X]  and #{player_two} [O]"
-  puts 'The game has started'
-  puts 'This is the board'
+
+  def initialize
+    @arr = %w[1 2 3 4 5 6 7 8 9]
+  end
+
+  def game_run
+    show_intro
+  end
+
+  def show_intro
+    puts WELCOME_MESSAGE
+    puts GAME_INSTRUCTIONS
+    print 'Input Name of the Player 1: '
+    @player_one = gets.chomp
+    print 'Input Name of the Player 2: '
+    @player_two = gets.chomp
+    puts ''
+    puts "Welcome! #{@player_one} [X]  and #{@player_two} [O].  The game has started"
+    puts ''
+    puts 'This is the board'
+    display_board(@arr)
+  end
 
   display_board(arr)
 
@@ -47,7 +58,7 @@ class Game
     puts 'This is the board now'
     display_board(arr)
     game_result = GameResult.new
-    i = 10 if game_result.win_checker(arr) 
+    i = 10 if game_result.win_checker(arr)
     i += 1
   end
 
@@ -60,4 +71,5 @@ class Game
   end
 end
 
-Game.new
+play = Game.new
+play.game_run
