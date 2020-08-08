@@ -4,8 +4,8 @@ class Move
   end
   attr_accessor :input
 
-  def validate(arr, arr_two)
-    if arr.count(@input).positive? && !arr_two.count(@input).positive? && @input != 'X' && @input != 'O'
+  def validate(arr)
+    if [*1..9].count(@input.to_i).positive? && arr.count(@input).positive?
       true
     else
       false

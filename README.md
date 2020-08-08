@@ -1,11 +1,10 @@
 # Tic-Tac-Toe
 
- In this project we created a Tic Tac Toe game using OOP. We used Ruby to write the game.
+ In this project we created a Tic Tac Toe game using OOP concepts. We used Ruby to write the game.
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/ershadul1/Tic-Tac-Toe)
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/ershadul1/Tic-Tac-Toe/issues)
 [![GitHub2 Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/ershadul1/Tic-Tac-Toe/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
  
 # What is Tic Tac Toe
  Tic-tac-toe, or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
@@ -43,17 +42,19 @@
 
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@Ershadul/Tic-Tac-Toe-3#bin/main.rb)
+[Live Demo Link](https://repl.it/@Ershadul/Tic-Tac-Toe#bin/main.rb)
 
 ## Getting Started
 
 To get a local copy of the repository please run the following commands on your terminal:
 
-- git clone git@github.com:ershadul1/Tic-Tac-Toe.git
-- cd into above cloned directory
-- cd into bin direc
-- run ruby main.rb
+- navigate to your desired directory in your local machine
+- clone the repo : `git clone git@github.com:ershadul1/Tic-Tac-Toe.git`
+- cd into above cloned directory : `cd Tic-Tac-Toe`
+- Now you can do whatever you like to improve the game
+- To play the game run this command `bin/main.rb`
 - you can use your test codes to test the methods
+- add your preferrred test cases in spec folder
 
 ## Authors
 
