@@ -62,7 +62,7 @@ To get a local copy of the repository please run the following commands on your 
 
 - Github: [@ershadul1](https://github.com/ershadul1)
 - Twitter: [@ErshadulRayhan](https://twitter.com/ErshadulRayhan)
-- Linkedin: [ErshadulRayhan](https://www.linkedin.com/in/ershadul-hakim-rayhan-a5a17649/)
+- Linkedin: [ErshadulRayhan](https://www.linkedin.com/in/ershadulrayhan/)
 - Email:  ershadul.rayhan@gmail.com
 
 👤 **Razika**
